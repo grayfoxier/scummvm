@@ -143,25 +143,25 @@ _readline=auto
 # Default option behaviour yes/no
 _debug_build=auto
 _release_build=auto
-_text_console=no
-_mt32emu=yes
-_build_scalers=yes
-_build_hq_scalers=yes
+_text_console=yes
+_mt32emu=no
+_build_scalers=no
+_build_hq_scalers=no
 _arm_asm=no
 _indeo3=auto
 _enable_prof=no
-_unix=no
+_unix=yes
 _global_constructors=no
-_elf_loader=no
+_elf_loader=yes
 # Default vkeybd/keymapper options
 _vkeybd=no
 _keymapper=no
 # GUI translation options
 _translation=yes
 # Default platform settings
-_backend=sdl
-_endian=unknown
-_need_memalign=no
+_backend=null
+_endian=BIG_ENDIAN
+_need_memalign=yes
 _have_x86=no
 _verbose_build=no
 _dynamic_modules=no
@@ -200,11 +200,11 @@ docdir='${datarootdir}/doc/scummvm'
 #localedir='${datarootdir}/locale'
 
 # For cross compiling
-_host=""
-_host_cpu=""
-_host_vendor=""
-_host_os=""
-_host_alias=""
+_host="xenon"
+_host_cpu="POWERPC"
+_host_vendor="Microsoft"
+_host_os="UNIX"
+_host_alias="xenon"
 
 _srcdir=`dirname $0`
 _port_mk="ports.mk"

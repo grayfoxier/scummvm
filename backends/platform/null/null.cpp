@@ -29,8 +29,11 @@
 #if defined(USE_NULL_DRIVER)
 #include "backends/saves/default/default-saves.h"
 #include "backends/timer/default/default-timer.h"
+#include "backends/events/default/default-events.h"
+#include "backends/mutex/null/null-mutex.h"
 #include "audio/mixer_intern.h"
 #include "common/scummsys.h"
+//#include "common/events.h"
 
 /*
  * Include header files needed for the getFilesystemFactory() method.
