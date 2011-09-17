@@ -31,6 +31,7 @@
 #include "backends/timer/default/default-timer.h"
 #include "backends/events/default/default-events.h"
 #include "backends/mutex/null/null-mutex.h"
+#include "backends/graphics/null/null-graphics.h"
 #include "audio/mixer_intern.h"
 #include "common/scummsys.h"
 //#include "common/events.h"
@@ -81,7 +82,7 @@ OSystem_NULL::~OSystem_NULL() {
 void OSystem_NULL::initBackend() {
 	_mutexManager = (MutexManager *)new NullMutexManager();
 	_timerManager = new DefaultTimerManager();
-	_eventManager = new DefaultEventManager(this);
+	_eventManager = new DefaultEventManager((Common::EventSource*)this);
 	_savefileManager = new DefaultSaveFileManager();
 	_graphicsManager = (GraphicsManager *)new NullGraphicsManager();
 	_audiocdManager = (AudioCDManager *)new DefaultAudioCDManager();
